@@ -18,8 +18,16 @@ collections:
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
-      - {label: "Cover Image", name: "coverimg", widget: "image"}
-
+      - label: "Featured Image"
+        name: "thumbnail"
+        widget: "image"
+        default: "/static/img/default.jpg"
+        options:
+          media_library:
+            config:
+              publicKey: "demopublickey"
+              multiple: true
+              
   - name: "pages"
     label: "Pages"
     files:
