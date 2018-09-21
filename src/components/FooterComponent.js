@@ -53,13 +53,13 @@ export default class FooterComponent extends React.Component {
         <div style={{ borderTop: '1px solid #555', gridColumn: '1/4', width: '90%', margin: '0 auto', paddingTop: '10px' }}>
           <div style={{ width: '531px', margin: '0 auto', display: 'grid', gridTemplateColumns: '531px minmax(20px, auto) 50px', gridTemplateRows: '50px' }}>  
           <span>
-            <a href="#">Politik & Gesellschaft</a>
+            <a href="/politikundgesellschaft">Politik & Gesellschaft</a>
             <span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            <a href="#">Über uns</a> 
+            <a href="ueberuns">Über uns</a> 
             <span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            <a href="#">Impressum</a>
+            <a href="/">Impressum</a>
             <span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            <a href="#">Datenschutz</a>
+            <a href="/">Datenschutz</a>
           </span>
           <span></span>
           <a
