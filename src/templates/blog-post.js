@@ -6,6 +6,8 @@ import Link from 'gatsby-link'
 import Content, { HTMLContent } from '../components/Content'
 import format from 'date-fns/format'
 import deLocale from 'date-fns/locale/de'
+import Layout from "../components/layout"
+
 
 export const BlogPostTemplate = ({
   content,
@@ -19,48 +21,38 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content
 
   return (
-    <section className="section">
-      {helmet || ''}
-      <div style={{ width: '1200px', margin: '0 auto' }}>
-        <h1 style={{ fontSize: '2.3em', fontWeight: 'normal', fontFamily: 'Merriweather', width: 'auto', textAlign: 'center', marginBottom: '20px' }}>
-          {title}
-        </h1>
-        <hr style={{ width: '50%', margin: '0px auto 30px auto' }}/>
-        <div style={{ color: '#888', fontFamily: 'Source Sans Pro', display: 'grid', gridTemplateColumns: '50% 50%', width: '60%', margin: '0 auto' }}>
-          <span style={{ alignSelf: 'center', fontSize: '1.1em' }}>
-            {format(date, 'D[.] MMMM YYYY', {locale: deLocale})}
-          </span>
-          <div style={{ marginBottom: '10px',  justifySelf: 'center' }}>      
-          {tags.map(tag => (
-            <Link 
-              style={{ 
-                background: '#0000000d', 
-                color: '#000000ad', 
-                padding: '5px 10px',
-                margin: '0 10px',
-                borderRadius: '2px' }} 
-              to={`/tags/${kebabCase(tag)}`}
-            >
-            {tag}
-            </Link>
-          ))}
+    <Layout>
+      <section className="section">
+        {helmet || ''}
+        <div style={{ width: '1200px', margin: '0 auto' }}>
+          <h1 style={{ fontSize: '2.3em', fontWeight: 'normal', fontFamily: 'Merriweather', width: 'auto', textAlign: 'center', marginBottom: '20px' }}>
+            {title}
+          </h1>
+          <hr style={{ width: '50%', margin: '0px auto 30px auto' }}/>
+          <div style={{ color: '#888', fontFamily: 'Source Sans Pro', display: 'grid', gridTemplateColumns: '50% 50%', width: '60%', margin: '0 auto' }}>
+            <span style={{ alignSelf: 'center', fontSize: '1.1em' }}>
+              {format(date, 'D[.] MMMM YYYY', {locale: deLocale})}
+            </span>
+            <div style={{ marginBottom: '10px',  justifySelf: 'end' }}>      
+            {tags.map(tag => (
+              <Link 
+                style={{ 
+                  background: '#0000000d', 
+                  color: '#000000ad', 
+                  padding: '5px 10px',
+                  margin: '0 10px',
+                  borderRadius: '2px' }} 
+                to={`/tags/${kebabCase(tag)}`}
+              >
+              {tag}
+              </Link>
+            ))}
+            </div>
           </div>
+          <PostContent content={content} className="post-content" />
         </div>
-        <PostContent content={content} className="post-content" />
-        {tags && tags.length ? (
-          <div style={{ marginTop: `4rem` }}>
-            <h4>Tags</h4>
-            <ul className="taglist">
-              {tags.map(tag => (
-                <li key={tag + `tag`}>
-                  <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ) : null}
-      </div>
-    </section>
+      </section>
+    </Layout>
   )
 }
 

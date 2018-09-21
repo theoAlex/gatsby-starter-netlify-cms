@@ -51,8 +51,8 @@ export default class politikUndGesellschaft extends React.Component {
                       style={{  
                         display: 'flex',
                         flexDirection: 'row',
-                        justifySelf: 'start',
-                        paddingLeft: '100px'
+                        justifySelf: 'end',
+                        paddingRight: '100px'
                       }}>
                         {post.frontmatter.tags.map(tag => (
                           <a 
@@ -62,7 +62,7 @@ export default class politikUndGesellschaft extends React.Component {
                               padding: '5px 10px',
                               margin: '0 10px',
                               borderRadius: '2px' }} 
-                            to={`/tags/${kebabCase(tag)}`}
+                            href={`/tags/${kebabCase(tag)}`}
                             key={tag}
                           >
                           {tag}

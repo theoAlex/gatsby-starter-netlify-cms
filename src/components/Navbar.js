@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'gatsby-link'
 
 import twitter from '../img/icon-twitter.svg'
 import logo from '../img/lupev6.svg'
@@ -93,7 +92,7 @@ export default class Navbar extends React.Component {
               }}>
                 <img src={twitter} alt="Github" style={{ 
                   marginTop: '30px',
-                  height: '35px',
+                  height: '28px',
                   maxWidth: '100%'
                 }} />
               </span>

@@ -6,7 +6,7 @@ import Img from 'gatsby-image'
 export default class UeberUns extends React.Component {
 
   componentDidMount() {
-    document.getElementsByTagName('BODY')[0].style.overflowY = 'scroll'
+    document.getElementsByTagName('BODY')[0].style.overflowY = 'visible'
     console.log(document.body.scrollHeight)
 
   }
