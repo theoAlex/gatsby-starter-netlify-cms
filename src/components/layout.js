@@ -7,7 +7,7 @@ import '../layouts/all.sass'
     
 
 const Layout = ({ children }) => (
-  <div className="wrapper">
+  <div style={{ display: 'none' }} className="wrapper">
     <Helmet title="Parlament Observer" />
     <Navbar />
     <div style={{ height: 'auto' }}>{children}</div>
