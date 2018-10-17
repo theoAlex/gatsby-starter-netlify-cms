@@ -8,7 +8,7 @@ import '../layouts/all.sass'
 
 const Layout = ({ children }) => (
   <div className="wrapper">
-    <Helmet title="Home | Gatsby + Netlify CMS" />
+    <Helmet title="Parlament Observer" />
     <Navbar />
     <div style={{ height: 'auto' }}>{children}</div>
     <FooterComponent />
