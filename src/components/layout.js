@@ -9,7 +9,7 @@ import '../layouts/all.sass'
 const Layout = ({ children }) => (
   <div>
     <img src="https://images.emojiterra.com/twitter/v11/512px/1f914.png" />
-    <div style={{ display: 'none' }} className="wrapper">
+    <div className="wrapper">
         <Helmet title="Parlament Observer" />
         <Navbar />
         <div style={{ height: 'auto' }}>{children}</div>
